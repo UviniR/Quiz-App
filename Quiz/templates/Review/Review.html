@@ -5,10 +5,12 @@
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="./styles_createquiz.css">
     <title>Review</title>
+         {% load static %}
+    <link rel="stylesheet" href="{% static 'styles_createquiz.css' %}">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg bg-light">
-    <img src="../landing/Logo.png" alt="Logo" width="150" class="logos">
+    <img src="{% static 'Logo.png' %}" alt="Logo" width="150" class="logos">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -16,11 +18,11 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link fonts" href="Dashboard.html">Dashboard</a>
+                <a class="nav-link fonts" href="#">Dashboard</a>
             </li>
             <li class="nav-item about">
-                <a class="nav-link fonts" aria-expanded="false" href="https://www.google.com">
-                    <img src="./logout.png" alt="Logo" width="30">
+                <a class="nav-link fonts" aria-expanded="false" href="#">
+                    <img src="{% static 'logout.png' %}" alt="Logo" width="30">
                 </a>
             </li>
         </ul>
@@ -47,14 +49,14 @@
         </div>
     </div>
     <br>
-    <p> Question 01 appeares here</p>
+    <p> Question 01 appears here</p>
     <ul>
         <li> Option 01</li>
         <li><b> Correct answer in bold </b></li>
         <li> Option 03</li>
     </ul>
     <br>
-    <p> Question 02 appeares here</p>
+    <p> Question 02 appears here</p>
     <ul>
         <li> Option 01</li>
         <li><b> Correct answer in bold </b></li>
