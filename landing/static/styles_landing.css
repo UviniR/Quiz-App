@@ -1,0 +1,50 @@
+.dropdown-item:active{
+background-color:#F98012
+}
+
+.login{
+padding-left: 5rem;
+padding-right: 5rem}
+
+.about{
+padding-left: 5rem;
+}
+
+.logos {
+margin-left: 7%;
+ }
+
+h1 {
+font-size: 50px;
+line-height: 70px;
+margin-left: 5%;
+margin-top: 30%;
+font-family:'Poppins';
+}
+
+.hp {
+margin-left: 5%;
+font-family:'Poppins';
+line-height: 30px;
+font-size: 20px;
+}
+
+.butt {
+background-color: #F98012;
+color: white;
+font-family:'Poppins';
+margin-top: 30%;
+margin-left: 15%;
+font-size: 20px;
+}
+
+.fonts{
+font-family:'Poppins';
+font-size: 16px;
+}
+
+.hr{
+background-color: #F98012;
+color: #F98012;
+border-width:2px;
+}

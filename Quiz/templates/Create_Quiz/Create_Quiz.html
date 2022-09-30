@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>Create Quiz</title>
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'styles_createquiz.css' %}">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-light">
+    <img src="{% static 'Logo.png' %}" alt="Logo" width="150" class="logos">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link fonts" href="#">Dashboard</a>
+            </li>
+            <li class="nav-item about">
+                <a class="nav-link fonts" aria-expanded="false" href="{% url 'landing'%}">
+                    <img src="{% static 'logout.png' %}" alt="Logo" width="30">
+                </a>
+        </ul>
+    </div>
+</nav>
+<br>
+<div class="container lbl mt-5">
+    <div class=" mb-5">
+        <label for="exampleFormControlInput1" class="form-label">Quiz Title</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1">
+    </div>
+    <div class="mb-5">
+        <label for="exampleFormControlTextarea1" class="form-label">Instructions</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <div class="row">
+        <label for="inputPassword2" class="form-label">Passcode</label>
+        <div class="col-auto">
+            <input type="text" class="form-control" id="inputPassword2">
+        </div>
+        <div class="col-auto ms-auto">
+            <a href="QA.html">
+                <button type="submit" class="butt btn"> Add Questions</button>
+            </a>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>
+</html>
