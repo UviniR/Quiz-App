@@ -13,3 +13,6 @@ def summary(request):
 
 def review(request):
     return render(request, 'Review/Review.html')
+
+def dashboard(request):
+    return render(request, 'Dashboard/Dashboard.html')
