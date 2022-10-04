@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f528cdf2-0e8a-4ad1-89e3-fd9f4758a102" name="Changes" comment="flui">
-      <change beforePath="$PROJECT_DIR$/.idea/Quiz-App.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Quiz-App.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quiz/Average.png" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz/static/Average.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quiz/Create_Quiz.html" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz/templates/Create_Quiz/Create_Quiz.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quiz/Highest.png" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz/static/Highest.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quiz/Lowest.png" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz/static/Lowest.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quiz/QA.html" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz/templates/QA/QA.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quiz/Quiz-Summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz/templates/Quiz-Summary/Quiz-Summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quiz/Review.html" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz/templates/Review/Review.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quiz/Students.png" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz/static/Students.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quiz/logout.png" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz/static/logout.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quiz/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quiz/styles_createquiz.css" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz/static/styles_createquiz.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quiz/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizApp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/QuizApp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizApp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/QuizApp/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizApp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/QuizApp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing/Landing1.png" beforeDir="false" afterPath="$PROJECT_DIR$/landing/static/Landing1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing/Logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/landing/static/Logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing/landing_UI.html" beforeDir="false" afterPath="$PROJECT_DIR$/landing/templates/landing/landing_UI.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing/styles_landing.css" beforeDir="false" afterPath="$PROJECT_DIR$/landing/static/styles_landing.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/landing/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +12,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
