@@ -1,12 +1,18 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import qna
 
 # Create your views here.
 def create(request):
+    qa = qna.Question
     return render(request, 'Create_Quiz/Create_Quiz.html')
 
-def qna(request):
-    return render(request, 'QA/QA.html')
+def qa(request):
+    x = qna.objects.all()
+    data = {
+        'x' : x
+    }
+    return render(request, 'QA/QA.html', data)
 
 def summary(request):
     return render(request, 'Quiz-Summary/Quiz-Summary.html')
