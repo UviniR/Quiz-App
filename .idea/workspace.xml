@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="f528cdf2-0e8a-4ad1-89e3-fd9f4758a102" name="Changes" comment="flui">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quiz/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quiz/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quiz/templates/QA/QA.html" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz/templates/QA/QA.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quiz/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quiz/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
