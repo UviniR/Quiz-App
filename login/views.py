@@ -17,7 +17,7 @@ def tlogin(request):
             if key == "password":
                 pwd = value
 
-        c = "select * from teacher where email='{}' and password='{}'".format(em, pwd)
+        c = "select * from Quiz_teacher where email='{}' and password='{}'".format(em, pwd)
         cursor.execute(c)
         t = tuple(cursor.fetchall())
         if t == ():

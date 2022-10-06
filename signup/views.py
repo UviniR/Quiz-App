@@ -23,7 +23,7 @@ def tsignup(request):
             if key == "password":
                 pwd = value
 
-        c = "insert into teacher Values('{}','{}','{}','{}')".format(fn, ln,em, pwd)
+        c = "insert into Quiz_teacher Values('{}','{}','{}','{}')".format(em, fn,ln, pwd)
         cursor.execute(c)
         m.commit()
 
@@ -45,7 +45,7 @@ def ssignup(request):
             if key == "password":
                 pwd = value
 
-        c = "insert into student Values('{}','{}','{}','{}')".format(fn, ln,em, pwd)
+        c = "insert into student_student Values('{}','{}','{}','{}')".format(em,fn, ln, pwd)
         cursor.execute(c)
         m.commit()
 

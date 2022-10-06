@@ -3,11 +3,12 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class Student(models.Model):
-    user=models.OneToOneField(User,on_delete=models.CASCADE)
+    #user=models.OneToOneField(User,on_delete=models.CASCADE)
     # mobile = models.CharField(max_length=20,null=False)
-    email = models.EmailField('')
+    email = models.EmailField(primary_key=True)
     first_name = models.CharField(max_length=20, default='')
     last_name = models.CharField(max_length=20, default='')
+    password = models.CharField(max_length=20, default='')
 
    
     @property
