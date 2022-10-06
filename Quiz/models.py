@@ -44,8 +44,9 @@ class Result(models.Model):
     submitted_date = models.DateTimeField(auto_now=True)
 
 class Teacher(models.Model):
-    user=models.OneToOneField(User,on_delete=models.CASCADE)
+    #user=models.OneToOneField(User,on_delete=models.CASCADE)
     # mobile = models.CharField(max_length=20,null=False)
-    email = models.EmailField('')
-    first_name = models.CharField(max_length=20, default='')
-    last_name = models.CharField(max_length=20, default='')
+    email = models.EmailField(primary_key=True)
+    first_name = models.CharField(max_length=100, default='')
+    last_name = models.CharField(max_length=100, default='')
+    password = models.CharField(max_length=100, default='')
