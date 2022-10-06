@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "Quiz",
-    "landing"
+    "landing",
+    "student",
+    "login",
+    "signup"
 ]
 
 MIDDLEWARE = [
