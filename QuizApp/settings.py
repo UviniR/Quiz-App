@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     "landing",
     "student",
     "login",
-    "signup"
+    "signup",
+    "widget_tweaks"
 ]
 
 MIDDLEWARE = [

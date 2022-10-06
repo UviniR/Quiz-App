@@ -5,6 +5,7 @@
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <title>Create Quiz</title>
      {% load static %}
+     {% load widget_tweaks %}
     <link rel="stylesheet" href="{% static 'styles_createquiz.css' %}">
 </head>
 <body>
@@ -32,11 +33,13 @@
         {%csrf_token%}
         <div class=" mb-5">
             <label for="exampleFormControlInput1" class="form-label">Quiz Title</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1">
+            <!-- <input type="text" class="form-control" id="exampleFormControlInput1"> -->
+            {% render_field createQuizForm.quiz_name class="form-control" %}
         </div>
         <div class="mb-5">
             <label for="exampleFormControlTextarea1" class="form-label">Instructions</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> -->
+            {% render_field createQuizForm.instructions class="form-control" %}
         </div>
         <div class="row">
             <div class="col-auto ms-auto">
