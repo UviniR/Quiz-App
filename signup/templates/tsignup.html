@@ -1,78 +1,86 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Signup Page</title>
-        <style>
-            body{
-                font-family: Arial, Helvetica, sans-serif;
-                background-color: white;
-            }
-            button{
-                background-color: #4CAF50;
-                width: 25%;
-                padding: 15px;
-                color: black;
-                border: none;
-                float: center;
-                font-size: 15px;
-            }
-            label{
-                font-size: 20px;
-            }
-            form{
-                border: 3px solid #f1f1f1;
-            }
-            input[type=email],input[type=text]{
-                width: 50%;
-                font-size: 15px;
-                margin: 8px 0px;
-                padding: 12px 20px;
-                display: inline-block;
-                border: 2px solid green;
-                box-sizing: border-box;
-            }
-            input[type=radio]{
-                height: 18px;
-                width: 18px;
-            }
-            button:hover{
-                opacity:0.7;
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>Teacher Signup</title>
+    <meta charset="utf-8">
+    {% load static %}
+    {% load widget_tweaks %}
+    <link rel="stylesheet" href="{% static 'styles_signup.css' %}">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-light">
+    <img src="{% static 'Logo.png' %}" alt="Logo" width="150" class="logos">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item about">
+                <a class="nav-link fonts" href="#">Home</a>
+            </li>
+            <li class="nav-item about">
+                <a class="nav-link fonts" href="#">About Us</a>
+            </li>
+            <li class="nav-item dropdown login">
+                <a class="nav-link dropdown-toggle fonts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Login
+                </a>
+                <ul class="dropdown-menu ">
+                    <li><a class="dropdown-item fonts" href="#">Teacher</a></li>
+                    <li><a class="dropdown-item fonts" href="#">Student</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item fonts" href="#">Sign Up</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container fonts mt-5">
+<h3 style="text-align: center;color: #F98012;">TEACHER SIGNUP</h3> <br>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-row" style="padding-left:20%;padding-right:20%;">
+      <div class="form-group mb-3">
+        <label for="username">Username</label>
+        {% render_field userForm.username|attr:'required:true'  class="form-control" placeholder="username" %}
+      </div>
+      <div class="form-group mb-3">
+        <label for="inputPassword4">Password</label>
+        {% render_field userForm.password|attr:'required:true'  class="form-control" placeholder="password" %}
+      </div>
+    </div>
 
-            }
-            .container{
-                padding: 50px;
-                background-color: white;
-            }
-            .imgcontainer {
-                text-align: center;
-                margin: 24px 0 12px 0;
-            }
+    <div class="form-row" style="padding-left:20%;padding-right:20%;">
+        <div class="form-group mb-3">
+          <label for="first_name">First Name</label>
+          {% render_field userForm.first_name|attr:'required:true'  class="form-control" placeholder="First Name" %}
+        </div>
+        <div class="form-group mb-3">
+          <label for="last_name">Last Name</label>
+          {% render_field userForm.last_name|attr:'required:true'  class="form-control" placeholder="Last Name" %}
+        </div>
+      </div>
 
-            img.avatar {
-                width: 10%;
-                border-radius: 50%;
-            }
-        </style>
-    </head>
-    <body>
-        <center><h1>Register From</h1></center>
-        <form action="#" method="post">
-            {% csrf_token %}
-            {% load static %}
-            <center><div class="container">
-                <div class="imgcontainer">
-                    <img src="{% static 'avatar_img2.png' %}" alt="Avatar" class="avatar">
-                </div>
-                <label for='first_name'><b>First Name : </b></label>
-		        <input type='text' placeholder="Enter your first name" name='first_name' required><br>
-		        <label for='last_name'><b>Last Name :</b></label>
-		        <input type='text' placeholder='Enter your last name' name='last_name' required><br>
-            	<label for ='email'><b>Email Id :  </b></label>
-            	<input type="email" placeholder="Enter email" name="email" float="right"  required><br>
-            	<label for='password'><b>Password : </b></label>
-            	<input type="text" placeholder="Enter Password" name="password" required><br>
-            	<button type="submit"><b>Signup</b></button><br>
-            	Already an accounct <a href="http://localhost:8000/login/tlogin"> Login </a>
-            </div></center>
-        </form>
-    </body>
+      <div class="form-row" style="padding-left:20%;padding-right:20%;">
+        <div class="form-group mb-3">
+          <label for="address">Email</label>
+          {% render_field teacherForm.email|attr:'required:true'  class="form-control" placeholder="example@example.com" %}
+        </div>
+      </div>
+
+      <div class="row d-flex justify-content-end" style="padding-right:18%;">
+        <button type="submit" class="btn butt mt-4 me-5" style="width: 100px;">Sign Up</button>
+      </div>
+  </form>
+  <center><a href="http://localhost:8000/login/tlogin" style="color:#FFCFA6;"> Already have an account </a></center>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous"></script>
+  </body>
 </html>
+

@@ -1,10 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>Student Signup</title>
+    <meta charset="utf-8">
+    {% load static %}
+    {% load widget_tweaks %}
+    <link rel="stylesheet" href="{% static 'styles_signup.css' %}">
 </head>
 <body>
+<nav class="navbar navbar-expand-lg bg-light">
+    <img src="{% static 'Logo.png' %}" alt="Logo" width="150" class="logos">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item about">
+                <a class="nav-link fonts" href="#">Home</a>
+            </li>
+            <li class="nav-item about">
+                <a class="nav-link fonts" href="#">About Us</a>
+            </li>
+            <li class="nav-item dropdown login">
+                <a class="nav-link dropdown-toggle fonts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Login
+                </a>
+                <ul class="dropdown-menu ">
+                    <li><a class="dropdown-item fonts" href="#">Teacher</a></li>
+                    <li><a class="dropdown-item fonts" href="#">Student</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item fonts" href="#">Sign Up</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container fonts mt-5">
+<h3 style="text-align: center;color: #F98012;">STUDENT SIGNUP</h3> <br>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-row" style="padding-left:20%;padding-right:20%;">
+      <div class="form-group mb-3">
+        <label for="username">Username</label>
+        {% render_field userForm.username|attr:'required:true'  class="form-control" placeholder="username" %}
+      </div>
+      <div class="form-group mb-3">
+        <label for="inputPassword4">Password</label>
+        {% render_field userForm.password|attr:'required:true'  class="form-control" placeholder="password" %}
+      </div>
+    </div>
 
-</body>
+    <div class="form-row" style="padding-left:20%;padding-right:20%;">
+        <div class="form-group mb-3">
+          <label for="first_name">First Name</label>
+          {% render_field userForm.first_name|attr:'required:true'  class="form-control" placeholder="First Name" %}
+        </div>
+        <div class="form-group mb-3">
+          <label for="last_name">Last Name</label>
+          {% render_field userForm.last_name|attr:'required:true'  class="form-control" placeholder="Last Name" %}
+        </div>
+      </div>
+
+      <div class="form-row" style="padding-left:20%;padding-right:20%;">
+        <div class="form-group mb-3">
+          <label for="address">Email</label>
+          {% render_field studentForm.email|attr:'required:true'  class="form-control" placeholder="example@example.com" %}
+        </div>
+      </div>
+
+      <div class="row d-flex justify-content-end" style="padding-right:18%;">
+        <button type="submit" class="btn butt mt-4 me-5" style="width: 100px;">Sign Up</button>
+      </div>
+  </form>
+  <center><a href="http://localhost:8000/login/slogin" style="color:#FFCFA6;"> Already have an account </a></center>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous"></script>
+  </body>
 </html>
+

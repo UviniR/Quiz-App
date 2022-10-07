@@ -29,10 +29,9 @@ def qa(request):
                 quiz=tmodel.Quiz.objects.get(id=request.POST.get('quiz_id'))
                 question.quiz=quiz
                 question.save() 
-                questionForm = tforms.AddQuestion()      
+                questionForm = tforms.AddQuestion()
             else:
                 print("form is invalid")
-            # return HttpResponseRedirect('/teacher/teacher-view-question')
         return render(request,'Teacher_QA/QA.html',{'questionForm':questionForm})
     return add_question_view(request)
 
