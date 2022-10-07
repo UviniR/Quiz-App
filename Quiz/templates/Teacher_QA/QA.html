@@ -5,6 +5,7 @@
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <title>Questions Answers</title>
          {% load static %}
+         {% load widget_tweaks %}
     <link rel="stylesheet" href="{% static 'styles_createquiz.css' %}">
 </head>
 <body>
@@ -17,7 +18,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link fonts" href="#">Dashboard</a>
+                <a class="nav-link fonts" href="{% url 'teacher-dashboard' %}">Dashboard</a>
             </li>
             <li class="nav-item about">
                 <a class="nav-link fonts" aria-expanded="false" href="{% url 'landing'%}">
@@ -29,45 +30,58 @@
 </nav>
 <br>
 <div class="container lbl mt-5 mb-5 fonts">
-    <div class=" mb-5">
-        <label for="question" class="form-label">Question</label>
-        <input type="text" class="form-control" id="question">
-    </div>
-    <div class=" mb-5">
-        <label for="option1" class="form-label">Option 01</label>
-        <input type="text" class="form-control" id="option1">
-    </div>
-    <div class=" mb-5">
-        <label for="option2" class="form-label">Option 02</label>
-        <input type="text" class="form-control" id="option2">
-    </div>
-    <div class=" mb-5">
-        <label for="option3" class="form-label">Option 03</label>
-        <input type="text" class="form-control" id="option3">
-    </div>
-    <div class=" mb-5">
-        <label for="correct" class="form-label">Correct Answer</label>
-        <select id="correct" class="form-select form-control">
-            <option value="" disabled selected>--</option>
-            <option>Option 01</option>
-            <option>Option 02</option>
-            <option>Option 03</option>
-        </select>
-    </div>
-    <div class="row">
-        <div class="col-md-1 offset-md-10 d-flex justify-content-end">
-            <a href="QA.html">
-                <button type="submit" class="butt btn px-3 py-2"> Add</button>
-            </a>
-        </div>
-        <div class="col-md-1 d-flex justify-content-end">
-            <a href="Review.html">
-                <button type="submit" class="btns btn px-3 py-2"> Finish</button>
-            </a>
-        </div>
-    </div>
+    <form method="POST" autocomplete="off">
+        {%csrf_token%}
+        <div class=" mb-5">
+            <label for="quiz" class="form-label">Quiz</label>
+            <!-- <input type="text" class="form-control" id="question"> -->
+            {% render_field questionForm.quiz_id|attr:'required:true' class="form-control" %}
 
-    <div class="row">
+        </div>
+        <div class=" mb-5">
+            <label for="question" class="form-label">Question</label>
+            <!-- <input type="text" class="form-control" id="question"> -->
+            {% render_field questionForm.question class="form-control" placeholder="question" %}
+        </div>
+        <div class=" mb-5">
+            <label for="option1" class="form-label">Option 01</label>
+            <!-- <input type="text" class="form-control" id="option1"> -->
+            {% render_field questionForm.option1|attr:'required:true' class="form-control" %}
+        </div>
+        <div class=" mb-5">
+            <label for="option2" class="form-label">Option 02</label>
+            <!-- <input type="text" class="form-control" id="option2"> -->
+            {% render_field questionForm.option2|attr:'required:true' class="form-control" %}
+        </div>
+        <div class=" mb-5">
+            <label for="option3" class="form-label">Option 03</label>
+            <!-- <input type="text" class="form-control" id="option3"> -->
+            {% render_field questionForm.option3|attr:'required:true' class="form-control" %}
+        </div>
+        <div class=" mb-5">
+            <label for="correct" class="form-label">Correct Answer</label>
+            {% render_field questionForm.answer|attr:'required:true' class="form-control" %}
+            <!-- <select id="correct" class="form-select form-control">
+                <option value="" disabled selected>--</option>
+                <option>Option 01</option>
+                <option>Option 02</option>
+                <option>Option 03</option>
+            </select> -->
+        </div>
+        <div class="row">
+            <div class="col-md-1 offset-md-10 d-flex justify-content-end">
+                <!-- <a href="QA.html"> -->
+                    <button type="submit" class="butt btn px-3 py-2"> Add</button>
+                <!-- </a> -->
+            </div>
+            <!-- <div class="col-md-1 d-flex justify-content-end">
+                <a href="Review.html">
+                    <button type="submit" class="btns btn px-3 py-2"> Finish</button>
+                </a>
+            </div> -->
+       </div>
+    </form>
+    <!-- <div class="row">
         <ul>
             {% for a in x %}
             <li>
@@ -82,7 +96,7 @@
             {% endfor %}
 
         </ul>
-    </div>
+    </div> -->
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
