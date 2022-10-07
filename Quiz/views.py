@@ -25,6 +25,7 @@ def qa(request):
                 quiz=tmodel.Quiz.objects.get(id=request.POST.get('quizID'))
                 question.quiz=quiz
                 question.save()       
+                questionForm.save()
             else:
                 print("form is invalid")
             # return HttpResponseRedirect('/teacher/teacher-view-question')
