@@ -18,7 +18,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link fonts" href="#">Dashboard</a>
+                <a class="nav-link fonts" href="{% url 'teacher-dashboard' %}">Dashboard</a>
             </li>
             <li class="nav-item about">
                 <a class="nav-link fonts" aria-expanded="false" href="{% url 'landing'%}">
@@ -35,13 +35,21 @@
         <div class=" mb-5">
             <label for="quiz" class="form-label">Quiz</label>
             <!-- <input type="text" class="form-control" id="question"> -->
+<<<<<<< HEAD
             {% render_field questionForm.quizID|attr:'required:true' class="form-control" %}
+=======
+            {% render_field questionForm.quiz_id|attr:'required:true' class="form-control" %}
+>>>>>>> origin/main
 
         </div>
         <div class=" mb-5">
             <label for="question" class="form-label">Question</label>
             <!-- <input type="text" class="form-control" id="question"> -->
+<<<<<<< HEAD
             {% render_field questionForm.question class="form-control" %}
+=======
+            {% render_field questionForm.question class="form-control" placeholder="question" %}
+>>>>>>> origin/main
         </div>
         <div class=" mb-5">
             <label for="option1" class="form-label">Option 01</label>
@@ -74,11 +82,11 @@
                     <button type="submit" class="butt btn px-3 py-2"> Add</button>
                 <!-- </a> -->
             </div>
-            <!-- <div class="col-md-1 d-flex justify-content-end">
+            <div class="col-md-1 d-flex justify-content-end">
                 <a href="Review.html">
                     <button type="submit" class="btns btn px-3 py-2"> Finish</button>
                 </a>
-            </div> -->
+            </div>
        </div>
     </form>
     <!-- <div class="row">
