@@ -1,6 +1,6 @@
 from email.policy import default
 from django.db import models
-from student.models import Student
+from signup.models import Student
 from django.contrib.auth.models import User
 
 # Create your models here.
@@ -42,11 +42,3 @@ class Result(models.Model):
     exam = models.ForeignKey(Quiz,on_delete=models.CASCADE)
     correct = models.PositiveIntegerField()
     submitted_date = models.DateTimeField(auto_now=True)
-
-class Teacher(models.Model):
-    #user=models.OneToOneField(User,on_delete=models.CASCADE)
-    # mobile = models.CharField(max_length=20,null=False)
-    email = models.EmailField(primary_key=True)
-    first_name = models.CharField(max_length=100, default='')
-    last_name = models.CharField(max_length=100, default='')
-    password = models.CharField(max_length=100, default='')

@@ -15,12 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from landing import views as lviews
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("quiz/", include('Quiz.urls')),
     path("", include('landing.urls')),
     path("login/", include('login.urls')),
-    path("signup/", include('signup.urls'))
+    path("signup/", include('signup.urls')),
+
+    path("login-redirect", lviews.login_redirect, name='login-redirect')
 
 ]
