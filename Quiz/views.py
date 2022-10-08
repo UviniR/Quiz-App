@@ -1,7 +1,9 @@
-from django.shortcuts import render
+from unicodedata import name
+from django.shortcuts import render, redirect
 from . import forms as tforms
 from . import models as tmodel
 from django.http import HttpResponseRedirect
+from signup import models as signupModel
 
 # Create your views here.
 def create(request):
@@ -52,7 +54,8 @@ def review(request,pk):
 def dashboard(request):
     def teacher_dashboard(request):
         quizes = tmodel.Quiz.objects.all()
-        return render(request,'Teacher-Dashboard/Teacher_Dashboard.html',{'quizes':quizes})
+        teacher = signupModel.Teacher.objects.get(user_id = request.user.id)
+        return render(request,'Teacher-Dashboard/Teacher_Dashboard.html',{'quizes':quizes, 'name': teacher})
     return teacher_dashboard(request)
 
 def delete_exam_view(request,pk):
