@@ -18,10 +18,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link fonts" href="{% url 'teacher-dashboard' %}">Dashboard</a>
+                <a class="nav-link fonts" href="{% url 'teacher-dashboard' %}" style="padding-right:30px;">Dashboard</a>
             </li>
             <li class="nav-item about">
-                <a class="nav-link fonts" aria-expanded="false" href="#">
+                <a class="nav-link fonts" aria-expanded="false" href="../../">
                     <img src="{% static 'logout.png' %}" alt="Logo" width="30">
                 </a>
             </li>
@@ -33,20 +33,20 @@
     <h2 style="font-weight:bold;">{{quizName}}</h2>
     <br>
     <div class="px-4 py-3" >
-        <div class="row py-3 mb-4" style="background: #F2F2F2;">
+        <div class="row py-3 mb-4 rounded" style="background: #FFCFA6;">
             <p><b>Instructions:</b></p>
             <p>{{instructions}}</p>
-        </div>
+        </div> 
 
         {% for q in questions %}
-            <div class="row pt-3 pb-0" style="background: #F2F2F2;">
-                <p>{{q.question}}</p>
+            <div class="row pt-3 pb-0 rounded mb-3" style="background: #F2F2F2;">
+                <b><p>{{q.question}}</p></b>
                 <ul class="px-4">
                     <li>{{q.option1}}</li>
                     <li>{{q.option2}}</li>
                     <li>{{q.option3}}</li>
                 </ul>
-                <p >Correct answer :  
+                <p style="color:green">Correct answer :  
                 {% if q.answer == 'Option1' %}
                     <b>{{q.option1}} </b>
                 {% elif q.answer == 'Option2' %}

@@ -21,8 +21,8 @@ from django.contrib.auth.models import User
 #     Passcode = models.CharField(max_length=4)
 
 class Quiz(models.Model):
-   quiz_name = models.CharField(max_length=50, default='quiz')
-   instructions = models.CharField(max_length=200, default='')
+   quiz_name = models.CharField(max_length=100, default='')
+   instructions = models.CharField(max_length=600, default='')
 #    id = models.AutoField(primary_key=True, default=2)
 
    def __str__(self):
