@@ -27,12 +27,12 @@
                     Login
                 </a>
                 <ul class="dropdown-menu ">
-                    <li><a class="dropdown-item fonts" href="#">Teacher</a></li>
-                    <li><a class="dropdown-item fonts" href="#">Student</a></li>
+                    <li><a class="dropdown-item fonts" href="login/tlogin">Teacher</a></li>
+                    <li><a class="dropdown-item fonts" href="login/slogin">Student</a></li>
                     <li>
-                        <hr class="dropdown-divider">
+                        <!-- <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item fonts" href="#">Sign in</a></li>
+                    <li><a class="dropdown-item fonts" href="#">Sign Up</a></li> -->
                 </ul>
             </li>
         </ul>
@@ -48,16 +48,16 @@
                 </H1>
                 <hr class="hr">
                 <p class="hp mt-3">
-                    We are on a mission to provide a free, world-class education for anyone, anywhere.
+                    We are on a mission to provide a free, world-class education for anyone, anywhere. <b>Start your journey with us! </b> 
                 </p>
             </div>
             <div class="row" style="width:100%">
                 <div class="col-md-1"></div>
                 <div class="col-sm-5">
-                    <a href="#" class="btn butt" role="button" data-bs-toggle="button">Teacher</a>
+                    <a href="signup/tsignup" class="btn butt">Teacher</a>
                 </div>
                 <div class="col-sm-5">
-                    <a href="#" class="btn butt" role="button" data-bs-toggle="button">Student</a>
+                    <a href="{% url 'ssignup' %}" class="btn butt">Student</a>
                 </div>
                 <div class="col-md-1"></div>
             </div>
