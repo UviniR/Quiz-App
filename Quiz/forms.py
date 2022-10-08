@@ -16,7 +16,7 @@ class CreateQuizForm(forms.ModelForm):
     # instructions = forms.CharField(max_length=200, widget=forms.Textarea(attrs={'rows': 4, 'cols': 30}))
 
 class AddQuestion(forms.ModelForm):
-    quiz_id=forms.ModelChoiceField(queryset=models.Quiz.objects.all(),empty_label="quiz_name", to_field_name="id")
+    quiz_id=forms.ModelChoiceField(queryset=models.Quiz.objects.all(),empty_label="--", to_field_name="id")
     class Meta:
         model = models.Question
         fields = ['question', 'option1', 'option2', 'option3', 'answer']

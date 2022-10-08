@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='teacher',
             name='email',
-            field=models.EmailField(max_length=254, primary_key=True, serialize=False),
+            field=models.EmailField(max_length=254, serialize=False),
         ),
     ]
