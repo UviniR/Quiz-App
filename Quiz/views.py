@@ -29,21 +29,33 @@ def qa(request):
                 quiz=tmodel.Quiz.objects.get(id=request.POST.get('quiz_id'))
                 question.quiz=quiz
                 question.save() 
-                questionForm = tforms.AddQuestion()
+                questionForm = tforms.AddQuestion()      
             else:
                 print("form is invalid")
+            # return HttpResponseRedirect('/teacher/teacher-view-question')
         return render(request,'Teacher_QA/QA.html',{'questionForm':questionForm})
     return add_question_view(request)
 
 def summary(request):
     return render(request, 'Teacher_Quiz_Summary/Quiz-Summary.html')
 
-def review(request):
-    return render(request, 'Teacher_Review/Review.html')
+def review(request,pk):
+    def view_question_view(request,pk):
+        questions=tmodel.Question.objects.all().filter(quiz_id=pk)
+        quiz = tmodel.Quiz.objects.get(id=pk)
+        # for q in quiz:
+        quizName = quiz.quiz_name
+        instructions = quiz.instructions
+        return render(request,'Teacher_Review/Review.html',{'questions':questions, 'quiz':quiz, 'quizName':quizName, 'instructions':instructions})
+    return view_question_view(request,pk)
 
 def dashboard(request):
-    return render(request, 'Teacher-Dashboard/Teacher_Dashboard.html')
+    def teacher_dashboard(request):
+        quizes = tmodel.Quiz.objects.all()
+        return render(request,'Teacher-Dashboard/Teacher_Dashboard.html',{'quizes':quizes})
+    return teacher_dashboard(request)
 
-def create_quiz_view(request):
-    createQuizForm = tforms.CreateQuizForm()
-    return render(request,'Create_Quiz/Create_Quiz.html',{'createQuizForm':createQuizForm})
+def delete_exam_view(request,pk):
+    quiz=tmodel.Quiz.objects.get(id=pk)
+    quiz.delete()
+    return HttpResponseRedirect('/quiz/dashboard')
