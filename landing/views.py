@@ -18,3 +18,6 @@ def login_redirect(request):
         return redirect('quiz/dashboard')
     else:
         return redirect('quiz/create')
+
+def about(request):
+    return render(request, 'landing/about.html')

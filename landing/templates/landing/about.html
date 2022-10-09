@@ -17,10 +17,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item about">
-                <a class="nav-link active fonts" aria-current="page" href="#">Home</a>
+                <a class="nav-link fonts" href="../">Home</a>
             </li>
             <li class="nav-item about">
-                <a class="nav-link fonts" href="{% url 'about' %}">About Us</a>
+                <a class="nav-link active fonts" aria-current="page" href="#">About Us</a>
             </li>
             <li class="nav-item dropdown login">
                 <a class="nav-link dropdown-toggle fonts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -38,36 +38,6 @@
         </ul>
     </div>
 </nav>
-<div class="container">
-    <div class="row" style="width:100%">
-        <div class="col-md-6">
-            <div class="row" style="width:100%">
-                <H1 class="mb-5"><b>
-                    <br><br>
-                    For every teacher, <br> every student.</b>
-                </H1>
-                <hr class="hr">
-                <p class="hp mt-3">
-                    We are on a mission to provide a free, world-class education for anyone, anywhere. <b>Start your journey with us! </b> 
-                </p>
-            </div>
-            <div class="row" style="width:100%">
-                <div class="col-md-1"></div>
-                <div class="col-sm-5">
-                    <a href="signup/tsignup" class="btn butt">Teacher</a>
-                </div>
-                <div class="col-sm-5">
-                    <a href="{% url 'ssignup' %}" class="btn butt">Student</a>
-                </div>
-                <div class="col-md-1"></div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <br><br>
-            <img src="{% static 'Landing1.png' %}" alt="landing" width="120%">
-        </div>
-    </div>
-</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
         crossorigin="anonymous"></script>
