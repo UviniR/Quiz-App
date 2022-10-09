@@ -7,6 +7,7 @@ urlpatterns = [
     path('summary',views.summary, name='summary'),
     path('review/<int:pk>',views.review, name='review'),
     path('dashboard', views.dashboard, name='teacher-dashboard'),
-    path('delete-quiz/<int:pk>', views.delete_exam_view, name='delete')
+    path('delete-quiz/<int:pk>', views.delete_exam_view, name='delete'),
+    path('logout', views.logout_view, name='logout')
 
 ]
