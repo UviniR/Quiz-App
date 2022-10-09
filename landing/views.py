@@ -16,8 +16,11 @@ def is_teacher(user):
 def login_redirect(request):
     if is_teacher(request.user):
         return redirect('quiz/dashboard')
+    elif is_student(request.user):
+        return redirect('student/sdashboard')
     else:
-        return redirect('quiz/create')
+        return redirect('')
 
 def about(request):
     return render(request, 'landing/about.html')
+

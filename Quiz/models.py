@@ -42,3 +42,4 @@ class Result(models.Model):
     exam = models.ForeignKey(Quiz,on_delete=models.CASCADE)
     correct = models.PositiveIntegerField()
     submitted_date = models.DateTimeField(auto_now=True)
+    qCount = models.PositiveIntegerField(default=0)
