@@ -29,7 +29,6 @@ def attempt(request,pk):
     response= render(request,'attempt.html',{'quiz':quiz,'questions':questions})
     response.set_cookie('quiz',quiz.id)
     return response
-    # return render(request, 'attempt.html')
 
 @login_required(login_url='slogin')
 @user_passes_test(is_student)  
@@ -48,11 +47,9 @@ def calculate_marks(request):
     if request.COOKIES.get('quiz') is not None:
         quiz_id = request.COOKIES.get('quiz')
         quiz = qmodel.Quiz.objects.get(id=quiz_id)
-        
         total_marks=0
         questions=qmodel.Question.objects.all().filter(quiz=quiz)
         for i in range(len(questions)):
-            
             selected_ans = request.COOKIES.get(str(i+1))
             actual_answer = questions[i].answer
             if selected_ans == actual_answer:
@@ -64,5 +61,4 @@ def calculate_marks(request):
         result.student=student
         result.qCount=len(questions)
         result.save()
-
         return HttpResponseRedirect('grades')
