@@ -4,6 +4,8 @@ from . import forms as tforms
 from . import models as tmodel
 from django.http import HttpResponseRedirect
 from signup import models as signupModel
+from django.contrib.auth import logout
+from django.shortcuts import redirect
 
 # Create your views here.
 def create(request):
@@ -62,3 +64,8 @@ def delete_exam_view(request,pk):
     quiz=tmodel.Quiz.objects.get(id=pk)
     quiz.delete()
     return HttpResponseRedirect('/quiz/dashboard')
+
+
+def logout_view(request):
+    logout(request)
+    return redirect('../')
