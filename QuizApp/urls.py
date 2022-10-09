@@ -23,8 +23,7 @@ urlpatterns = [
     path("", include('landing.urls')),
     path("login/", include('login.urls')),
     path("signup/", include('signup.urls')),
-
     path("login-redirect", lviews.login_redirect, name='login-redirect'),
-    path("student/", include('student.urls')),
+    path("student/", include('student.urls'))
 
 ]
