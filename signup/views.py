@@ -27,11 +27,8 @@ def teacher_signup_view(request):
         return HttpResponseRedirect('../login/tlogin')
     return render(request,'tsignup.html',context=mydict)
 
-
-
 def is_teacher(user):
     return user.groups.filter(name='TEACHER').exists()
-
 
 def student_signup_view(request):
     userForm=forms.StudentUserForm()

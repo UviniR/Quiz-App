@@ -43,12 +43,8 @@ def qa(request):
                 questionForm = tforms.AddQuestion()      
             else:
                 print("form is invalid")
-            # return HttpResponseRedirect('/teacher/teacher-view-question')
         return render(request,'Teacher_QA/QA.html',{'questionForm':questionForm})
     return add_question_view(request)
-
-# def summary(request):
-#     return render(request, 'Teacher_Quiz_Summary/Quiz-Summary.html')
 
 @login_required(login_url='tlogin')
 @user_passes_test(is_teacher)
@@ -56,7 +52,6 @@ def review(request,pk):
     def view_question_view(request,pk):
         questions=tmodel.Question.objects.all().filter(quiz_id=pk)
         quiz = tmodel.Quiz.objects.get(id=pk)
-        # for q in quiz:
         quizName = quiz.quiz_name
         instructions = quiz.instructions
         return render(request,'Teacher_Review/Review.html',{'questions':questions, 'quiz':quiz, 'quizName':quizName, 'instructions':instructions})

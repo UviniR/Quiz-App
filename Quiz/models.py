@@ -3,28 +3,9 @@ from django.db import models
 from signup.models import Student
 from django.contrib.auth.models import User
 
-# Create your models here.
-# class qna(models.Model):
-#     Question = models.CharField(max_length=100)
-#     Option1 = models.CharField(max_length=100)
-#     Option2 = models.CharField(max_length=100)
-#     Option3 = models.CharField(max_length=100)
-#     Correct = models.CharField(max_length=10)
-#
-#     def __str__(self):
-#         return self.Question
-#
-#
-# class create(models.Model):
-#     Name = models.CharField(max_length=50)
-#     Instructions = models.CharField(max_length=250)
-#     Passcode = models.CharField(max_length=4)
-
 class Quiz(models.Model):
    quiz_name = models.CharField(max_length=100, default='')
    instructions = models.CharField(max_length=600, default='')
-#    id = models.AutoField(primary_key=True, default=2)
-
    def __str__(self):
         return self.quiz_name
 
