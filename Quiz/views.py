@@ -6,8 +6,14 @@ from django.http import HttpResponseRedirect
 from signup import models as signupModel
 from django.contrib.auth import logout
 from django.shortcuts import redirect
+from django.contrib.auth.decorators import login_required,user_passes_test
 
 # Create your views here.
+def is_teacher(user):
+    return user.groups.filter(name='TEACHER').exists()
+
+@login_required(login_url='tlogin')
+@user_passes_test(is_teacher)    
 def create(request):
     def create_quiz_view(request):
         createQuizForm = tforms.CreateQuizForm()
@@ -22,7 +28,8 @@ def create(request):
         return render(request,'Create_Quiz/Create_Quiz.html',{'createQuizForm':createQuizForm})
     return create_quiz_view(request)
     
-
+@login_required(login_url='tlogin')
+@user_passes_test(is_teacher)
 def qa(request):
     def add_question_view(request):
         questionForm = tforms.AddQuestion()
@@ -40,9 +47,11 @@ def qa(request):
         return render(request,'Teacher_QA/QA.html',{'questionForm':questionForm})
     return add_question_view(request)
 
-def summary(request):
-    return render(request, 'Teacher_Quiz_Summary/Quiz-Summary.html')
+# def summary(request):
+#     return render(request, 'Teacher_Quiz_Summary/Quiz-Summary.html')
 
+@login_required(login_url='tlogin')
+@user_passes_test(is_teacher)
 def review(request,pk):
     def view_question_view(request,pk):
         questions=tmodel.Question.objects.all().filter(quiz_id=pk)
@@ -53,6 +62,8 @@ def review(request,pk):
         return render(request,'Teacher_Review/Review.html',{'questions':questions, 'quiz':quiz, 'quizName':quizName, 'instructions':instructions})
     return view_question_view(request,pk)
 
+@login_required(login_url='tlogin')
+@user_passes_test(is_teacher)
 def dashboard(request):
     def teacher_dashboard(request):
         quizes = tmodel.Quiz.objects.all()
@@ -60,11 +71,12 @@ def dashboard(request):
         return render(request,'Teacher-Dashboard/Teacher_Dashboard.html',{'quizes':quizes, 'name': teacher})
     return teacher_dashboard(request)
 
+@login_required(login_url='tlogin')
+@user_passes_test(is_teacher)
 def delete_exam_view(request,pk):
     quiz=tmodel.Quiz.objects.get(id=pk)
     quiz.delete()
     return HttpResponseRedirect('/quiz/dashboard')
-
 
 def logout_view(request):
     logout(request)

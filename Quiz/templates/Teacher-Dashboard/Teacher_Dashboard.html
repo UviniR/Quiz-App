@@ -44,14 +44,19 @@
             <div class="col-md-6">
                 <p class="m-0 p-2"><b>{{q.quiz_name}}</b></p>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <a href="{% url 'review' q.id  %}">
                     <button class="btn m-0 p-2" style="color:#F98012; border-color: #F2F2F2;"> View Questions </button>
                 </a>
             </div>
-            <div class="col-md-3 d-flex justify-content-center">
+            <div class="col-md-2 d-flex justify-content-center">
+                <a href="{% url 'qna' %}">
+                    <button class="btn m-0 p-2" style="color:#F98012; border-color: #F2F2F2;"> Add Questions </button>
+                </a>
+            </div>
+            <div class="col-md-2 d-flex justify-content-center">
                 <a href="{% url 'delete' q.id  %}">
-                    <button class="btn m-0 p-2" style="color:#FFCFA6; border-color: #F2F2F2;"> Delete </button>
+                    <button class="btn m-0 p-2" style="color:red; border-color: #F2F2F2;"> Delete </button>
                 </a>
             </div>
         </div>
