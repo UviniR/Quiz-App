@@ -1,4 +1,4 @@
-# Quiz App 🧑‍🏫
+# Quiz Time! 🧑‍🏫
 This is an online quiz platform which allows the teachers to create quizes and students to attempt them at their comfort zones.  
 
 ***
