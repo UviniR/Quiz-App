@@ -1,7 +1,7 @@
 # Quiz App 🧑‍🏫
 This is an online quiz platform which allows the teachers to create quizes and students to attempt them at their comfort zones.  
-### Web App User Interface 
 
+***
 ### Functionality 
   #### Teacher
   * Create an account as a teacher
@@ -62,3 +62,15 @@ http://127.0.0.1:8000/
  * Let teachers view the grades of students
  * Let students view the correct answers 
 
+***
+### Web App User Interface 
+#### Landing Page
+![landing](/UI-Screenshots/landing.png "Landing Page")
+#### Teacher Dashboard
+![landing](/UI-Screenshots/teacher-dash.png "Landing Page")
+#### Student Dashboard
+![landing](/UI-Screenshots/student-dash.png "Landing Page")
+#### Attempt Quiz
+![landing](/UI-Screenshots/attempt-quiz.png "Landing Page")
+#### View Grades
+![landing](/UI-Screenshots/grades.png "Landing Page")
