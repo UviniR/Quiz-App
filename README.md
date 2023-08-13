@@ -1,20 +1,20 @@
 # Quiz Time! 🧑‍🏫
-This is an online quiz platform which allows the teachers to create quizes and students to attempt them at their comfort zones.  
+This online quiz platform allows teachers to create quizzes and students to attempt them in their comfort zones.  
 
 ***
 ### Functionality 
   #### Teacher
   * Create an account as a teacher
-  * After login can view a dashboard with all the available quizes
-  * Add new questions to the existing quize
-  * Create new quizes and add questions
-  * Review created quizes
-  * Delete quizes
+  * After login can view a dashboard with all the available quizzes
+  * Add new questions to the existing quiz
+  * Create new quizzes and add questions
+  * Review created quizzes
+  * Delete quizzes
   #### Student
   * Create an account as a student
-  * After login can view a dashboard with all the available quizes
+  * After login can view a dashboard with all the available quizzes
   * Attempt any quiz
-  * View grades of all the attempted quizes
+  * View grades of all the attempted quizzes
  *** 
 ### How to Run the Project 
   * Install Python 
