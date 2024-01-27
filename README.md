@@ -1,4 +1,7 @@
 # Quiz Time! 🧑‍🏫
+
+[![YouTube](https://img.shields.io/badge/YouTube-Watch_Project-red?logo=YouTube)](https://youtu.be/oSEwg5-7UlM?si=aHD_cANbYJ-Q_Sxl)
+
 This online quiz platform allows teachers to create quizzes and students to attempt them in their comfort zones.  
 
 ***
